@@ -1,4 +1,4 @@
-name: Test
+name: CI
 
 on:
   push:
@@ -10,6 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          pytest --nbmake ./*/**ipynb
+          echo Add other actions to build,
+          echo test, and deploy your project.
