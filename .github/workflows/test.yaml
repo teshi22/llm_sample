@@ -12,6 +12,5 @@ jobs:
     steps:
       - name: Run a multi-line script
         run: |
+          pip install -r requirements.txt
           pytest --nbmake ./*/**ipynb
-          echo Add other actions to build,
-          echo test, and deploy your project.
