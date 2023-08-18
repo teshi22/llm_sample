@@ -1,4 +1,4 @@
-name: CI
+name: CodeTest
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a multi-line script
-        run: |
-          pip install -r requirements.txt
-          pytest --nbmake ./*/**ipynb
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pytest --nbmake ./*/**ipynb
