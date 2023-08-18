@@ -13,6 +13,6 @@ jobs:
       - name: Install dependencies
         run: pwd
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r ./requirements.txt
       - name: Install dependencies
         run: pytest --nbmake ./*/**ipynb
